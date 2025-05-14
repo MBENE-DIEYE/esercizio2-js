@@ -44,6 +44,15 @@ mostraEta(){
     return this.#calcolaEta()
 }
 
+
+// ---------------------------------------metodo protteto------------------------------
+
+_controllaChilometri(){
+    if (this.chilometraggio > 10.000){
+        return"il chilometraggio ha superato 10.000km"
+    }
+}
+
 }
 
 let auto1 = new Automobile("audi","renault",2013);
