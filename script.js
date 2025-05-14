@@ -53,12 +53,25 @@ _controllaChilometri(){
     }
 }
 
+// -----------------------------------------Confronta Km-----------------------------------------
+
+ static confrontaChilometraggio(auto11,auto12){
+    if(auto11.chilometraggio >= auto12.chilometraggio){
+        return auto11
+    }
+    else{
+        return auto12
+    }
 }
 
-let auto1 = new Automobile("audi","renault",2013);
+}
+
+let auto1 = new Automobile("audi","renault",2013,40);
+let secondauto = new Automobile("fcffcf","vgrtbt",2001,35)
+let result = Automobile.confrontaChilometraggio(auto1,secondauto)
 let auto2 = Automobile.restruczione(auto1);
 console.log(auto2)
-
+console.log(result)
 
 
 // ----------------------------------------
