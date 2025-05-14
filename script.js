@@ -2,14 +2,14 @@ class Automobile{
     marca = "";
     modello = "";
     anno = 0
-    // aggiungi propietà
-    chilometraggio =""
-
+    chilometraggio =0
+     
     constructor(marca,modello,anno,chilometraggio){
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = chilometraggio
+        
     }
 
   static restruczione(automobile){
@@ -17,45 +17,77 @@ class Automobile{
 
         return auto
     }
-    // aggiungi methodi
-static aggiungichilometraggio(km){
-    let chilomet = new Automobile(km.marca,km.modello,km.anno,km.chilometraggio)
+    //---------------------------------------------------------------- aggiungi methodi------------------------------------
 
-    return chilomet 
+
+
+ aggiungichilometraggio(km){
+
+  this.chilometraggio =( this.chilometraggio) + km 
 }
 
-static mostrachilometraggio (){
-    return aggiungichilometraggio(km)
+ mostrachilometraggio (){
+    return` ${this.chilometraggio}km`
 }
+
 
 }
 
-let auto1 = new Automobile("audi","renault",13,40+"km");
+let auto1 = new Automobile("audi","renault",13);
 let auto2 = Automobile.restruczione(auto1);
-let auto3 = Automobile.aggiungichilometraggio(auto1)
- 
-console.log(auto3)
+console.log(auto2)
 
-// sotto classe Electrica
+
+
+// ----------------------------------------
+let auto3 = new Automobile("fiat","panda")
+auto3.aggiungichilometraggio(90)
+console.log(auto3.mostrachilometraggio())
+ 
+ 
+// console.log(auto3)
+
+
+
+
+// -------------------------------------------------------------------------sotto classe Electrica----------------------------
+
+
+
 
 class Eletrica extends Automobile{
     autonomia =0
 
-    constructor(marca,modello,anno,chilometraggio,autonomia){
-        super(marca,modello,anno,chilometraggio)
+    constructor(marca,modello,autonomia){
+        super(marca,modello)
         this.autonomia = autonomia
     }
-   static restruczione(automobile){
-        let auto = new Eletrica (automobile.marca,automobile.modello,automobile.anno,automobile.chilometraggio,automobile.autonomia )
-
-        return auto
+     restruczione(){
+         
+        return `${this.marca} ${this.modello},autonomia: ${
+            this.autonomia
+        } km`
     }
 
     ricarica(km){
-        return km +1
+         this.autonomia += km 
     }
 }
 
-let auto4 = new Eletrica ("audi","renault",25,70+"km",100);
-let auto5 = Eletrica.restruczione(auto4);
-console.log(auto5)
+let auto4 = new Eletrica ("audi","renault",100);
+ console.log(auto4.restruczione());  
+
+// // ---------------------------------------------------saluta()----------------------------
+
+function Automobile(marca,modello) {
+    this.marca = marca
+    this.modello =modello
+    
+    
+}
+
+   Automobile.prototype.saluta = function(){
+    return `Ciao! ${this.marca} ${this.modello}`;
+   }
+let auto5 = new Automobile("toyota","renault")
+console.log(auto5.saluta())
