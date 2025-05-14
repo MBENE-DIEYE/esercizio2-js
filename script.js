@@ -3,16 +3,17 @@ class Automobile{
     modello = "";
     anno = 0
     chilometraggio =0
+    età = 0
      
-    constructor(marca,modello,anno,chilometraggio){
+    constructor(marca,modello,anno,chilometraggio,età){
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = chilometraggio
-        
+        this.età = età
     }
 
-  static restruczione(automobile){
+    restruczione(automobile){
         let auto = new Automobile (automobile.marca,automobile.modello,automobile.anno )
 
         return auto
@@ -30,10 +31,22 @@ class Automobile{
     return` ${this.chilometraggio}km`
 }
 
+// ----------------------------------------------------metodo privato------------------------------
+
+ #calcolaEta(){
+     this.età = 2025 - this.anno 
 
 }
 
-let auto1 = new Automobile("audi","renault",13);
+
+
+mostraEta(){
+    return this.#calcolaEta()
+}
+
+}
+
+let auto1 = new Automobile("audi","renault",2013);
 let auto2 = Automobile.restruczione(auto1);
 console.log(auto2)
 
@@ -91,3 +104,4 @@ function Automobile(marca,modello) {
    }
 let auto5 = new Automobile("toyota","renault")
 console.log(auto5.saluta())
+
