@@ -6,7 +6,7 @@ class Automobile{
     età = 0
 
     // ------------------------------------------------contatore------------------
-    #contatorechiamato
+    #contatorechiamato=0
      
     constructor(marca,modello,anno,chilometraggio,età){
         this.marca = marca;
@@ -14,7 +14,7 @@ class Automobile{
         this.anno = anno;
         this.chilometraggio = chilometraggio
         this.età = età
-        this.#contatorechiamato = this.#contatorechiamato
+        this.#contatorechiamato =0
     }
 
     restruczione(automobile){
@@ -66,6 +66,12 @@ _controllaChilometri(){
     else{
         return auto12
     }
+}
+
+// -----------------------------------------------incrementa contatore-------------------------------
+
+#incrementaContatore(){
+    this.#contatorechiamato= this.#contatorechiamato + 1
 }
 
 }
