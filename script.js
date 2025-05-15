@@ -14,7 +14,7 @@ class Automobile{
         this.anno = anno;
         this.chilometraggio = chilometraggio
         this.età = età
-        this.#contatorechiamato =0
+        this.#contatorechiamato = this.#contatorechiamato
     }
 
     descrizione(){
@@ -26,7 +26,7 @@ class Automobile{
 
  aggiungichilometraggio(km){
 
-  this.chilometraggio =( this.chilometraggio) + km 
+  this.chilometraggio = this.chilometraggio + km 
 }
 
  mostrachilometraggio (){
@@ -69,7 +69,14 @@ _controllaChilometri(){
 // -----------------------------------------------incrementa contatore-------------------------------
 
 #incrementaContatore(){
-    this.#contatorechiamato= this.#contatorechiamato + 1
+   return this.#contatorechiamato= this.#contatorechiamato + 1
+}
+
+// --------------------------------------------------aggiungi km ----------------------------------------
+
+aggiungiChilometri(){
+
+    return this.#incrementaContatore() ;
 }
 
 }
@@ -82,7 +89,9 @@ let secondauto = new Automobile("TOYOTA","renault",2015,80)
  console.log(auto1.mostrachilometraggio())
  console.log(auto1.mostraEta())
  console.log(auto1._controllaChilometri())
-console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
+ console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
+ console.log(auto1.aggiungiChilometri())
+//  console.log(auto1.aggiungiChilometri())
 
 
 
