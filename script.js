@@ -100,20 +100,20 @@ set chilometraggio(chilometraggio){
 }
 }
 
-let auto1 = new Automobile("audi","renault",2013,40);
-let secondauto = new Automobile("TOYOTA","renault",2015,80)
- console.log(auto1)
- console.log(auto1.descrizione())
- auto1.aggiungichilometraggio(20)
- console.log(auto1.mostrachilometraggio())
- console.log(auto1.mostraEta())
- console.log(auto1._controllaChilometri())
- console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
- console.log(auto1.aggiungiChilometri(20))
- console.log(auto1.aggiungiChilometri(20))
-//  console.log(secondauto.mostraContatoreChiamate())
- console.log(auto1.mostraContatoreChiamate())
- console.log(auto1.chilometraggio())
+// let auto1 = new Automobile("audi","renault",2013,40);
+// let secondauto = new Automobile("TOYOTA","renault",2015,80)
+//  console.log(auto1)
+//  console.log(auto1.descrizione())
+//  auto1.aggiungichilometraggio(20)
+//  console.log(auto1.mostrachilometraggio())
+//  console.log(auto1.mostraEta())
+//  console.log(auto1._controllaChilometri())
+//  console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
+//  console.log(auto1.aggiungiChilometri(20))
+//  console.log(auto1.aggiungiChilometri(20))
+// //  console.log(secondauto.mostraContatoreChiamate())
+//  console.log(auto1.mostraContatoreChiamate())
+//  console.log(auto1.chilometraggio())
 
 
 
@@ -164,5 +164,23 @@ let secondauto = new Automobile("TOYOTA","renault",2015,80)
 
 // ----------------------------------------------------CAMION --------------------------------------
 class Camion extends Automobile{
+    caricoMassimo = 0
+// ----------------------------------------------------carico massimo --------------------------------
+    constructor(marca,modello,anno,caricoMassimo){
+        super(marca,modello,anno)
+        this.caricoMassimo = caricoMassimo
+    }
+    descrizione(){
+        return `Marca: ${this.marca} Modello:${this.modello} Anno: ${this.anno} Caricomassimo:${this.caricoMassimo}`
+    }
 
+    carica(kg){
+        if(kg < this.caricoMassimo){
+            this.caricoMassimo += kg
+        }
+        return this.caricoMassimo
+    }
 }
+auto1 = new Camion("toyota" ,"renaul",2020,300+"kg")
+console.log(auto1.descrizione())
+console.log(auto1.carica(200))
