@@ -98,11 +98,23 @@ set chilometraggio(chilometraggio){
         this.chilometraggio = chilometraggio
     }
 }
+
+
+// -------------------------------------------------veifica instanza ------------------------------------------
+static verificaInstance(obj,classe){
+    if(obj instanceof classe){
+        return " obj è un instanza di classe"
+    }
+    else{
+        return "obj non è un instanza di classe"
+    }
+
+}
 }
 
-// let auto1 = new Automobile("audi","renault",2013,40);
-// let secondauto = new Automobile("TOYOTA","renault",2015,80)
-//  console.log(auto1)
+let auto1 = new Automobile("audi","renault",2013,40);
+let secondauto = new Automobile("TOYOTA","renault",2015,80)
+ console.log(auto1)
 //  console.log(auto1.descrizione())
 //  auto1.aggiungichilometraggio(20)
 //  console.log(auto1.mostrachilometraggio())
@@ -114,7 +126,7 @@ set chilometraggio(chilometraggio){
 // //  console.log(secondauto.mostraContatoreChiamate())
 //  console.log(auto1.mostraContatoreChiamate())
 //  console.log(auto1.chilometraggio())
-
+console.log(Automobile.verificaInstance(obj,classe))
 
 
 
@@ -178,9 +190,18 @@ class Camion extends Automobile{
         if(kg < this.caricoMassimo){
             this.caricoMassimo += kg
         }
+    
         return this.caricoMassimo
     }
 }
-auto1 = new Camion("toyota" ,"renaul",2020,300+"kg")
-console.log(auto1.descrizione())
-console.log(auto1.carica(200))
+// let auto2 = new Camion("toyota" ,"renaul",2020,300+"kg")
+// console.log(auto2.descrizione())
+// console.log(auto2.carica(700))
+
+// if(auto1 instanceof Automobile){
+//     console.log("auto1 è un automobile")
+// }
+
+// if(auto2 instanceof Camion){
+//     console.log("auto2 è un camion")
+// }
