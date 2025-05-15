@@ -17,10 +17,8 @@ class Automobile{
         this.#contatorechiamato =0
     }
 
-    restruczione(automobile){
-        let auto = new Automobile (automobile.marca,automobile.modello,automobile.anno )
-
-        return auto
+    descrizione(){
+        return `marca: ${this.marca} modello: ${this.modello} anno: ${this.anno}`
     }
     //---------------------------------------------------------------- aggiungi methodi------------------------------------
 
@@ -77,10 +75,14 @@ _controllaChilometri(){
 }
 
 let auto1 = new Automobile("audi","renault",2013,40);
-let secondauto = new Automobile("fcffcf","vgrtbt",2001,35)
-let auto2 = Automobile.restruczione(auto1);
+let secondauto = new Automobile("TOYOTA","renault",2015,80)
+ console.log(auto1)
+ console.log(auto1.descrizione())
+ auto1.aggiungichilometraggio(0)
+ console.log(auto1.mostrachilometraggio())
+ console.log(auto1.mostraEta())
+ console.log(auto1._controllaChilometri())
 console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
-
 
 
 
