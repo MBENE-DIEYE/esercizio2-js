@@ -90,6 +90,14 @@ get chilometraggio(){
     return this.chilometraggio
 }
 
+
+// ---------------------------------------setter ---------------------------------------
+
+set chilometraggio(chilometraggio){
+    if(chilometraggio >= this.chilometraggio){
+        this.chilometraggio = chilometraggio
+    }
+}
 }
 
 let auto1 = new Automobile("audi","renault",2013,40);
@@ -105,6 +113,7 @@ let secondauto = new Automobile("TOYOTA","renault",2015,80)
  console.log(auto1.aggiungiChilometri(20))
 //  console.log(secondauto.mostraContatoreChiamate())
  console.log(auto1.mostraContatoreChiamate())
+ console.log(auto1.chilometraggio())
 
 
 
