@@ -161,3 +161,8 @@ let secondauto = new Automobile("TOYOTA","renault",2015,80)
 // let auto5 = new Automobile("toyota","renault")
 // console.log(auto5.saluta())
 
+
+// ----------------------------------------------------CAMION --------------------------------------
+class Camion extends Automobile{
+
+}
