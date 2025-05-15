@@ -38,7 +38,7 @@ class Automobile{
 // ----------------------------------------------------metodo privato------------------------------
 
  #calcolaEta(){
-     this.età = 2025 - this.anno 
+   return  this.età = 2025 - this.anno 
 
 }
 
@@ -78,19 +78,10 @@ _controllaChilometri(){
 
 let auto1 = new Automobile("audi","renault",2013,40);
 let secondauto = new Automobile("fcffcf","vgrtbt",2001,35)
-let result = Automobile.confrontaChilometraggio(auto1,secondauto)
 let auto2 = Automobile.restruczione(auto1);
-console.log(auto2)
-console.log(result)
+console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
 
 
-// ----------------------------------------
-let auto3 = new Automobile("fiat","panda")
-auto3.aggiungichilometraggio(90)
-console.log(auto3.mostrachilometraggio())
- 
- 
-// console.log(auto3)
 
 
 
@@ -100,40 +91,40 @@ console.log(auto3.mostrachilometraggio())
 
 
 
-class Eletrica extends Automobile{
-    autonomia =0
+// class Eletrica extends Automobile{
+//     autonomia =0
 
-    constructor(marca,modello,autonomia){
-        super(marca,modello)
-        this.autonomia = autonomia
-    }
-     restruczione(){
+//     constructor(marca,modello,autonomia){
+//         super(marca,modello)
+//         this.autonomia = autonomia
+//     }
+//      restruczione(){
          
-        return `${this.marca} ${this.modello},autonomia: ${
-            this.autonomia
-        } km`
-    }
+//         return `${this.marca} ${this.modello},autonomia: ${
+//             this.autonomia
+//         } km`
+//     }
 
-    ricarica(km){
-         this.autonomia += km 
-    }
-}
+//     ricarica(km){
+//          this.autonomia += km 
+//     }
+// }
 
-let auto4 = new Eletrica ("audi","renault",100);
- console.log(auto4.restruczione());  
+// let auto4 = new Eletrica ("audi","renault",100);
+//  console.log(auto4.restruczione());  
 
 // // ---------------------------------------------------saluta()----------------------------
 
-function Automobile(marca,modello) {
-    this.marca = marca
-    this.modello =modello
+// function Automobile(marca,modello) {
+//     this.marca = marca
+//     this.modello =modello
     
     
-}
+// }
 
-   Automobile.prototype.saluta = function(){
-    return `Ciao! ${this.marca} ${this.modello}`;
-   }
-let auto5 = new Automobile("toyota","renault")
-console.log(auto5.saluta())
+//    Automobile.prototype.saluta = function(){
+//     return `Ciao! ${this.marca} ${this.modello}`;
+//    }
+// let auto5 = new Automobile("toyota","renault")
+// console.log(auto5.saluta())
 
