@@ -85,6 +85,10 @@ aggiungiChilometri(){
 mostraContatoreChiamate(){
     return this.#aggiungiChilometriChiamato
 }
+// -------------------------------------------------getter --------------------------------------------
+get chilometraggio(){
+    return this.chilometraggio
+}
 
 }
 
