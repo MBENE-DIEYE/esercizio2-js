@@ -115,17 +115,17 @@ static verificaInstance(obj,classe){
 let auto1 = new Automobile("audi","renault",2013,40);
 let secondauto = new Automobile("TOYOTA","renault",2015,80)
  console.log(auto1)
-//  console.log(auto1.descrizione())
-//  auto1.aggiungichilometraggio(20)
-//  console.log(auto1.mostrachilometraggio())
-//  console.log(auto1.mostraEta())
-//  console.log(auto1._controllaChilometri())
-//  console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
-//  console.log(auto1.aggiungiChilometri(20))
-//  console.log(auto1.aggiungiChilometri(20))
-// //  console.log(secondauto.mostraContatoreChiamate())
-//  console.log(auto1.mostraContatoreChiamate())
-//  console.log(auto1.chilometraggio())
+ console.log(auto1.descrizione())
+ auto1.aggiungichilometraggio(20)
+ console.log(auto1.mostrachilometraggio())
+ console.log(auto1.mostraEta())
+ console.log(auto1._controllaChilometri())
+ console.log(Automobile.confrontaChilometraggio(auto1,secondauto))
+ console.log(auto1.aggiungiChilometri(20))
+ console.log(auto1.aggiungiChilometri(20))
+//  console.log(secondauto.mostraContatoreChiamate())
+ console.log(auto1.mostraContatoreChiamate())
+ console.log(auto1.chilometraggio())
 console.log(Automobile.verificaInstance(obj,classe))
 
 
@@ -194,14 +194,14 @@ class Camion extends Automobile{
         return this.caricoMassimo
     }
 }
-// let auto2 = new Camion("toyota" ,"renaul",2020,300+"kg")
-// console.log(auto2.descrizione())
-// console.log(auto2.carica(700))
+let auto2 = new Camion("toyota" ,"renaul",2020,300+"kg")
+console.log(auto2.descrizione())
+console.log(auto2.carica(700))
+// ----------------------------------------------------verifica instanza ---------------------------------------
+if(auto1 instanceof Automobile){
+    console.log("auto1 è un automobile")
+}
 
-// if(auto1 instanceof Automobile){
-//     console.log("auto1 è un automobile")
-// }
-
-// if(auto2 instanceof Camion){
-//     console.log("auto2 è un camion")
-// }
+if(auto2 instanceof Camion){
+    console.log("auto2 è un camion")
+}
